@@ -7,7 +7,7 @@ excerpt: >
 article_header:
   actions:
     - text: View Courses
-      type: primary
+      type: error
       url: "#courses"
     - text: Track Progress
       type: outline-theme-dark
@@ -17,6 +17,7 @@ article_header:
   background_color: "#1a237e"
   background_image:
     gradient: "linear-gradient(135deg, rgba(26, 35, 126, 0.95), rgba(40, 53, 147, 0.9), rgba(0, 105, 92, 0.85))"
+    src: https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1920&q=80
 
 data:
   sections:
@@ -26,8 +27,11 @@ data:
       background_color: "#f5f5f5"
       actions:
         - text: Start Learning
-          type: primary
+          type: error
           url: "#courses"
+        - text: View Schedule
+          type: outline-primary
+          url: "#schedule"
 
     - title: <i class="fas fa-graduation-cap"></i> Spring 2026 Courses
       excerpt: Select a course to explore student presentations, research articles, peer reviews, assignments, lecture materials, projects, and track your progress.
@@ -37,12 +41,37 @@ data:
         - title: <i class="fas fa-shield-alt"></i> Software Verification & Validation
           excerpt: Master the principles and practices of ensuring software quality through systematic testing, validation, and verification techniques. Learn industry-standard methodologies for building reliable and secure systems.
           content: '<div class="progress-indicator"><span class="progress-label">Course Progress</span><div class="progress-bar-container"><div class="progress-bar"><div class="progress-fill" style="--progress-percentage: 65%"></div></div><span class="progress-percentage">65%</span></div></div>'
+          actions:
+            - text: Enter Course
+              type: info
+              url: "#svv"
 
         - title: <i class="fas fa-lock"></i> Encryption
           excerpt: Explore cryptographic algorithms, security protocols, and practical applications of encryption in modern computing systems. Understand the mathematical foundations and real-world implementations of secure communication.
           content: '<div class="progress-indicator"><span class="progress-label">Course Progress</span><div class="progress-bar-container"><div class="progress-bar"><div class="progress-fill" style="--progress-percentage: 72%"></div></div><span class="progress-percentage">72%</span></div></div>'
+          actions:
+            - text: Enter Course
+              type: success
+              url: "#encryption"
 
-    - title: Software Verification & Validation - Resources
+    - title: Software Verification & Validation
+      excerpt: Comprehensive resources and learning materials for mastering software quality assurance
+      theme: dark
+      background_color: "#283593"
+      image:
+        src: https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&q=80
+        is_row: true
+        full_width: true
+        style: "max-width: 1200px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);"
+      actions:
+        - text: <i class="fas fa-book-open"></i> Course Materials
+          type: outline-theme-dark
+          url: "#svv-resources"
+        - text: <i class="fas fa-chart-line"></i> View Progress
+          type: outline-theme-dark
+          url: "#svv-progress"
+
+    - title: SV&V Resources
       excerpt: Access all course materials and track your learning progress
       theme: light
       background_color: "#f5f5f5"
@@ -103,7 +132,24 @@ data:
               type: info
               url: "#"
 
-    - title: Encryption - Resources
+    - title: Encryption & Cryptography
+      excerpt: Dive deep into the mathematical foundations and practical applications of modern cryptography
+      theme: dark
+      background_color: "#00695c"
+      image:
+        src: https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&q=80
+        is_row: true
+        full_width: true
+        style: "max-width: 1200px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);"
+      actions:
+        - text: <i class="fas fa-book-open"></i> Course Materials
+          type: outline-theme-dark
+          url: "#encryption-resources"
+        - text: <i class="fas fa-chart-line"></i> View Progress
+          type: outline-theme-dark
+          url: "#encryption-progress"
+
+    - title: Encryption Resources
       excerpt: Access all course materials and track your learning progress
       theme: light
       background_color: "#f5f5f5"
@@ -164,6 +210,31 @@ data:
               type: success
               url: "#"
 
+    - title: <i class="fas fa-calendar-alt"></i> Semester Schedule
+      excerpt: Stay on track with important dates and deadlines
+      theme: light
+      background_color: "#ffffff"
+      actions:
+        - text: View Full Calendar
+          type: error
+          url: "#calendar"
+      children:
+        - title: Week 1-4
+          excerpt: Course introduction, foundational concepts, and initial assignments. Focus on understanding core principles and methodologies.
+          content: '<span class="tag tag--success">Completed</span>'
+
+        - title: Week 5-8
+          excerpt: Midterm preparation, advanced topics, and group projects. Dive deeper into specialized areas and collaborative work.
+          content: '<span class="tag tag--info">In Progress</span>'
+
+        - title: Week 9-12
+          excerpt: Advanced implementations, research presentations, and practical applications. Apply learned concepts to real-world scenarios.
+          content: '<span class="tag tag--warning">Upcoming</span>'
+
+        - title: Week 13-16
+          excerpt: Final projects, comprehensive review, and semester wrap-up. Showcase your learning and prepare for finals.
+          content: '<span class="tag tag--warning">Upcoming</span>'
+
     - title: <i class="fas fa-trophy"></i> Semester Progress Overview
       excerpt: Your comprehensive academic journey through Spring 2026
       theme: dark
@@ -191,4 +262,23 @@ data:
             <p>Pending</p>
           </div>
         </div>
+      actions:
+        - text: <i class="fab fa-github"></i> GitHub
+          type: outline-theme-dark
+          url: https://github.com/sweeden-ttu
+        - text: <i class="fab fa-linkedin"></i> LinkedIn
+          type: outline-theme-dark
+          url: https://linkedin.com/in/weedens
+
+    - title: About This Portfolio
+      excerpt: Built with Jekyll TeXt Theme - A powerful, customizable static site generator perfect for academic portfolios and course management.
+      theme: light
+      background_color: "#f5f5f5"
+      actions:
+        - text: <i class="fas fa-envelope"></i> Contact Me
+          type: primary
+          url: "mailto:sweeden@ttu.edu"
+        - text: <i class="fas fa-home"></i> Visit My Website
+          type: outline-primary
+          url: "https://scottweeden.online"
 ---
